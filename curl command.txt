@@ -1,0 +1,26 @@
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{
+    "image_url": "https://storage.googleapis.com/putra_image_content_moderation_1/protests.jpg"
+}' \
+"https://image-content-moderation-api-605626490127.asia-southeast1.run.app"
+
+
+curl -X POST \
+  -H "Authorization: Bearer $(gcloud auth print-identity-token)" \
+  -H "Content-Type: application/json" \
+  -d '{
+      "image_url": "https://storage.googleapis.com/putra_image_content_moderation_1/protests.jpg"
+  }' \
+  "https://image-content-moderation-api-605626490127.asia-southeast1.run.app"
+
+
+
+
+curl -X POST \
+  -H "Authorization: Bearer $(gcloud auth print-identity-token)" \
+  -H "Content-Type: application/json" \
+  -d '{
+      "image_url": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2235891756.jpg"
+  }' \
+  "https://image-content-moderation-api-605626490127.asia-southeast1.run.app"
